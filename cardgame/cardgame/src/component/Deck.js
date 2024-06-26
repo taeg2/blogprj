@@ -46,7 +46,9 @@ export default function Deck() {
   return (
     <Board>
       <Count>
-        {matched.length == 5 ? "다 맞췄습니다!!" : `${matched.length}/5`}
+        {`맞힌 개수: ${matched.length}/5`}
+        <br />
+        {matched.length == 5 ? "축하합니다, 성공입니다!!" : null}
       </Count>
       <Container>
         {cards.map((cardIndex, idx) => (
